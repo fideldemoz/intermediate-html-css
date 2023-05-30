@@ -1,5 +1,12 @@
+@import url(https://fontlibrary.org//face/gidole-regular);
+@font-face {
+  font-family: system-ui;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
 html {
-  font-family: sans-serif;
+  font-family: system-ui;
 }
 
 table {
@@ -7,6 +14,7 @@ table {
   border: 2px solid rgb(200,200,200);
   letter-spacing: 1px;
   font-size: 0.8rem;
+  margin-left: 4px;
 }
 
 td, th {
@@ -16,6 +24,11 @@ td, th {
 
 th {
   background-color: rgb(235,235,235);
+  font-family: 'GidoleRegular';
+  font-weight: bold;
+  font-style: normal;
+  text-shadow: 3px 2px 4px red, -3px -2px 4px blue, 1px 0 12px green;
+  color: white;
 }
 
 td {
