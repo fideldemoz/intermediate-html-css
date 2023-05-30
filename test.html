@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Test</title>
+	<link rel="icon" href="https://fav.farm/✊">
+	<link rel="stylesheet" href="">
+	<style type="text/css">
+		.stylish td, .stylish th {
+			border: 1px solid grey;
+			padding: 1rem;
+			font-size: 1.5rem;
+			background-color: #06d6a0;
+			color: #073b4c;
+			font-family: arial;
+			font-weight: 500;
+			transition: border 0.3s ease-out;
+		}
+		.stylish td:hover {
+			border-left-width: 9px;
+		}
+		table {
+			border-collapse: collapse;
+			margin: 2rem auto 0 auto;
+		}
+		.stylish .one {
+			background-color: #ef476f;
+			border-left: 2px solid #073b4c;
+		}
+		.stylish .two {
+			background-color: #ffd166;
+			border-left: 2px solid #06d6a0;
+		}
+		.stylish .three {
+			background-color: #118ab2;
+			border-left: 2px solid gray;
+		}
+		.horario td, .horario th {
+			padding: 10px 20px;
+			font-family: sans-serif;
+			font-weight: 200;
+			font-size: 1rem;
+			border: 1px solid gray;
+			text-align: center;
+		}
+		.tuesday, .thursday {
+			background-color: #97DB9A;
+		}
+		.wednesday, .weekend {
+			width: 42px;
+		}
+		.friday {
+			background-color:#DCC48E; 
+			border:4px solid #C1437A;
+		}
+		.horario th {
+			font-weight: 700;
+		}
+	</style>
+</head>
+<body>
+	<h1>Stylish table</h1>
+	<table class="stylish">
+		<tr>
+			<th>Header 1</th>
+			<th>Header 2</th>
+			<th>Header 3</th>
+			<tr>
+				<td class="one">Main</td>
+				<td class="two">Main</td>
+				<td class="three">Main</td>
+			</tr>
+			<tr>
+				<td class="two">Main</td>
+				<td class="one">Main</td>
+				<td class="two">Main</td>
+			</tr>
+			<tr>
+				<td class="three">Main</td>
+				<td class="one">Main</td>
+				<td class="three">Main</td>
+			</tr>
+		</tr>
+	</table>
+	<h1>Timetable</h1>
+	<table class="horario">
+		<caption>Teacher's schedule</caption>
+		<colgroup>
+			<col class="left" />
+			<col class="monday" />
+			<col class="tuesday" />
+			<col class="wednesday" />
+			<col class="thursday" />
+			<col class="friday" />
+			<col span="2" class="weekend" />
+		</colgroup>
+		<tbody>
+			<tr>
+			<td id="period">&nbsp;</td>
+			<th id="mon">Mon</th>
+			<th id="tue">Tue</th>
+			<th id="wed">Wed</th>
+			<th id="thu">Thu</th>
+			<th id="fri">Fri</th>
+			<th id="sat">Sat</th>
+			<th id="sun">Sun</th>
+		</tr>
+		<tr>
+			<th id="first">1<sup>st</sup> period</th>
+			<td headers="first mon">English</td>
+			<td headers="first tue">&nbsp;</td>
+			<td headers="first wed">&nbsp;</td>
+			<td headers="first thu">German</td>
+			<td headers="first fri">Dutch</td>
+			<td headers="first sat">&nbsp;</td>
+			<td headers="first sun">&nbsp;</td>
+		</tr>
+		<tr>
+			<th id="second">2<sup>nd</sup> period</th>
+			<td headers="second mon">English</td>
+			<td headers="second tue">English</td>
+			<td headers="second wed">&nbsp;</td>
+			<td headers="second thu">German</td>
+			<td headers="second fri">Dutch</td>
+			<td headers="second sat">&nbsp;</td>
+			<td headers="second sun">&nbsp;</td>
+		</tr>
+		<tr>
+			<th id="third">3<sup>rd</sup> period</th>
+			<td headers="third mon">&nbsp;</td>
+			<td headers="third tue">German</td>
+			<td headers="third wed">&nbsp;</td>
+			<td headers="third thu">German</td>
+			<td headers="third fri">Dutch</td>
+			<td headers="third sat">&nbsp;</td>
+			<td headers="third sun">&nbsp;</td>
+		</tr>
+		<tr>
+			<th id="forth">4<sup>th</sup> period</th>
+			<td headers="forth mon">&nbsp;</td>
+			<td headers="forth tue">English</td>
+			<td headers="forth wed">&nbsp;</td>
+			<td headers="forth thu">German</td>
+			<td headers="forth fri">Dutch</td>
+			<td headers="forth sat">&nbsp;</td>
+			<td headers="forth sun">&nbsp;</td>
+		</tr>
+		</tbody>
+	</table>
+</body>
+</html>
