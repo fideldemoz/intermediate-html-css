@@ -1,0 +1,84 @@
+:root {
+	--bg: hsl(155,2%,50%);
+	--wd: min(420px, 100%);
+	--ht: 100vh;
+	--mg: 0 auto;
+	--pd: 4px 8px;
+	--bar-wd: 33px;
+	--bar-ht: 30px;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+html {
+	background-color: white;
+}
+
+body {
+	background-color: var(--bg);
+	width: var(--wd);
+	height: var(--ht);
+	margin: var(--mg);
+	padding: var(--pd);
+}
+
+div#bar {
+	width: var(--bar-wd);
+	height: var(--bar-ht);
+}
+
+.line {
+	display: block;
+	width: 100%;
+	height: calc(var(--bar-ht)/3 - 4px);
+	background-color: white;
+	margin: 4px 0;
+	border-radius: 12px;
+}
+
+.nav{
+	height: 100px;
+	background-color: white;
+	position: absolute;
+	top: 4px;
+	transition: all .5s ease-out;
+	display: none;
+}
+
+div.show {
+	width: calc(var(--wd) - 16px);
+	display: block;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	margin: 6px 10% 6px 5%;
+	width: 60%;
+	background: darkblue;
+	padding: 4px;
+	border-radius: 2px;
+	font-weight: 700;
+}
+
+a li {
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+}
+a li:hover, a:hover {
+	background: red;
+	text-decoration: none;
+}
+.close {
+	position: absolute;
+	top: 40px;
+	right: 40px;
+}

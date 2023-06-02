@@ -1,0 +1,14 @@
+form {
+	max-width: 455px;
+	margin: 0 auto; 
+}
+
+input {
+	margin: 4px;
+}
+
+fieldset {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}

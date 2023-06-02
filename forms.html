@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="forms.css"/>
+	<title>Forms</title>
+</head>
+<body>
+	<form action="https://httpbin.org/post" method="post">
+	<!-- <div id="form"> -->
+		<fieldset>
+			<legend>Basic Info</legend>
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" placeholder="F...">
+			<label for="email">Email:</label>
+			<input type="email" name="email" id="email" placeholder="fid@ex.com">
+			<label for="pswd">Password:</label>
+			<input type="password" name="pswd" id="pswd">
+		</fieldset>
+		<fieldset>
+			<legend>Numbers</legend>
+			<label for="age">Age:</label>
+			<input type="number" name="idade" id="age">
+			<label for="dob">Date of Birth:</label>
+			<input type="date" id="dob" name="dob">
+		</fieldset>
+		<fieldset>
+			<legend>Write</legend>
+			<label for="message">Message:</label>
+			<textarea id="message" name="textarea"></textarea>
+		</fieldset>
+		<fieldset>
+			<legend>Choices</legend>
+			<label for="choices">Choose:</label>
+			<select id="choices" name="fashion">
+			  <optgroup label="Clothing">
+			    <option value="t_shirt">T-Shirts</option>
+			    <option value="sweater">Sweaters</option>
+			    <option value="coats">Coats</option>
+			  </optgroup>
+			  <optgroup label="Foot Wear">
+			    <option value="sneakers">Sneakers</option>
+			    <option value="boots">Boots</option>
+			    <option value="sandals">Sandals</option>
+			  </optgroup>
+			</select>
+		</fieldset>
+		<input type="button" value="Go">
+	<!-- </div> -->
+	</form>
+	<h1>Ticket Type</h1>
+<div>
+  <input type="radio" id="child" name="ticket_type" value="child">
+  <label for="child">Child</label>
+</div>
+
+<div>
+  <input type="radio" id="adult" name="ticket_type" value="adult" checked>
+  <label for="adult">Adult</label>
+</div>
+
+<div>
+  <input type="radio" id="senior" name="ticket_type" value="senior">
+  <label for="senior">Senior</label>
+</div>
+<h1>Pizza Toppings</h1>
+
+<div>
+  <input type="checkbox" id="sausage" name="topping" value="sausage">
+  <label for="sausage">Sausage</label>
+</div>
+
+<div>
+  <input type="checkbox" id="onions" name="topping" value="onions">
+  <label for="onions">Onions</label>
+</div>
+
+<div>
+  <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
+  <label for="pepperoni">Pepperoni</label>
+</div>
+
+<div>
+  <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
+  <label for="mushrooms">Mushrooms</label>
+</div>
+</body>
+</html>
+	<script defer>
+		const form = document.querySelector("form");
+		const name = form.querySelector("#name")
+		const email = form.querySelector("#email")
+		const password = form.querySelector("#pswd")
+		const age = form.querySelector("#age")
+		const birth = form.querySelector("#dob")
+		const btn = form.querySelector('input[type="button"]')
+		const txta = form.querySelector('textarea')
+
+		btn.addEventListener("click",() => {
+			const data = {
+				"source": form.id.toString(),
+				"name": name.value,
+				"email": email.value,
+				"password": password.value,
+				"age": parseInt(age.value),
+				"birth": new Date(birth.value)
+			}
+			console.log(data)
+			console.log(txta.value)
+		})
+	</script>
