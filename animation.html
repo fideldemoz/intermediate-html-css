@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Js Animations</title>
+		<style>
+			body {
+				display: flex;
+			}
+			div {
+				width: 120px;
+				height: 120px;
+				font-size: 18px;
+				font-weight: 900;
+				font-family: sans-serif;
+				background-color: hsla(2, 23%, 90%, 1);
+				margin: 2rem 2rem;
+				display: inline-block;
+				box-sizing: border-box;
+				padding: 0.4rem;
+				transition: all 0.5s ease-out;
+				overflow: hidden;
+				flex-shrink: 0;
+				flex-wrap: wrap;
+			}
+			#width {
+				display: flex;
+				gap: 1px;
+				flex-wrap: wrap;
+				align-items: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div data_class="width" id="width">
+			<span id="pri">Change</span> <span id="rol">Width</span>
+		</div>
+		<div data_class="height" id="height">Change Height</div>
+		<div data_class="bg" id="bg">Change Background</div>
+		<div data_class="corners" id="corners">Change corners</div>
+		<div data_class="borders" id="borders">Change borders</div>
+		<script>
+			const contentChanging = [
+				{ width: "15px" },
+				{ width: "120px" },
+				{ width: "60px" },
+				{ width: "30px" },
+			];
+			const textTiming = {
+				duration: 3000,
+				iterations: Infinity,
+			};
+			const action = function () {
+				document.querySelector("div").animate(contentChanging, 3000);
+			};
+			/*window.setInterval(action,3000)*/
+			const rollingWord = document.querySelector("#rol");
+			const first = document.querySelector("#pri");
+			const box = document.querySelector("#width");
+			let i = 0;
+			const repeat = function () {
+				wdo = ["create", "expand", "check", "change"];
+				options = ["word", "height", "sizing", "anything"];
+				styles = ["green", "blue", "red", "yellowgreen"];
+				radius = ["12px", "9px", "5px", "20px"];
+				index = Math.floor(Math.random() * radius.length);
+				if (i < options.length) {
+					first.textContent = wdo[i];
+					rollingWord.textContent = options[i];
+					rollingWord.style.color =
+						styles[Math.floor(Math.random() * i) * 1];
+					box.style.borderRadius = radius[index];
+				}
+				i++;
+				i >= options.length ? (i = 0) : i;
+			};
+
+			window.setInterval(repeat, 3000);
+		</script>
+	</body>
+</html>

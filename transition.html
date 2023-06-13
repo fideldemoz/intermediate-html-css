@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		div {
+			width: 120px;
+			height: 120px;
+			font-size: 18px;
+			font-weight: 900;
+			font-family: sans-serif;
+			background-color: hsla(2,23%,90%,1);
+			margin: 2rem auto;
+			display: inline-block;
+			box-sizing: border-box;
+			padding: .4rem;
+			transition: all .5s ease-out;
+		}
+		button {
+			padding-left: .2rem;
+		}
+		.width {
+			width: 60px;
+		}
+		.height {
+			height: 60px;
+		}
+		.bg {
+			background-color: hsla(122,43%,44%,.9);
+		}
+		.corners {
+			border-radius: 15px;
+		}
+		.borders {
+			border-top: 2px solid hsl(60,60%,30%);
+			border-right: 4px solid hsl(60,60%,30%);
+			border-bottom: 8px solid hsl(60,60%,30%);
+			border-left: 16px solid hsl(60,60%,30%);
+		}
+	</style>
+	<title>Transitions</title>
+</head>
+<body>
+	<div data_class="width" id="width">Change Width</div>
+	<div data_class="height" id="height">Change Height</div>
+	<div data_class="bg" id="bg">Change Background</div>
+	<div data_class="corners" id="corners">Change corners</div>
+	<div data_class="borders" id="borders">Change borders</div>
+	<button id="btn">Click</button>
+	<script>
+		const width = document.querySelector("#width")
+		const height = document.querySelector("#height")
+		const bg = document.querySelector("#bg")
+		const corners = document.querySelector("#corners")
+		const borders = document.querySelector("#borders")
+		const btn = document.querySelector("#btn")
+		const elements = [width, height, bg, corners, borders]
+		let status
+		let added = false
+		btn.addEventListener("click", function () {
+			if (added === true) {
+				elements.forEach( function(element) {
+					element.classList.remove(element.id)
+					added = false
+		})} else if (added === false) {
+				elements.forEach( function(element) {
+					element.classList.add(element.id)
+					added = true
+			});
+			}
+		})
+		core = function (selector) {
+			
+		}
+		
+	</script>
+</body>
+</html>
